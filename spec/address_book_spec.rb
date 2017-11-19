@@ -43,7 +43,7 @@ RSpec.describe AddressBook do
 
     it 'removes one entry from the address book' do
       book.remove_entry('Jared Truscott', '555.555.1234', 'jtruscott78@gmail.com')
-      expect book == []
+      expect book = []
     end
   end
 end
