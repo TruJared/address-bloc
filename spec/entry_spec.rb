@@ -19,7 +19,7 @@ RSpec.describe Entry do
       expect(entry.phone_number).to eq('555.555.1234')
     end
 
-    it 'resonds to email' do
+    it 'responds to email' do
       expect(entry).to respond_to(:email)
     end
 

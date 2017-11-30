@@ -1,7 +1,7 @@
 require_relative 'entry'
 
 class AddressBook
-  attr_reader :entries
+  attr_accessor :entries
 
   def initialize
     @entries = []
@@ -21,7 +21,7 @@ class AddressBook
   end
 
   def remove_entry(name, phone_number, email)
-    entries.delete_if { |entry| name == entry.name && 
+    entries.delete_if { |entry| name == entry.name &&
     phone_number == entry.phone_number &&  email == entry.email }
   end
 end
