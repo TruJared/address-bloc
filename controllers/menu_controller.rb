@@ -77,6 +77,7 @@ class MenuController
     puts "4) Import entries from a CSV"
     puts "5) View entry by position number"
     puts "6) Exit"
+    puts "99) NUKE"
     print "You must choose, but choose wisely: "
 
     selection = gets.to_i
@@ -100,6 +101,11 @@ class MenuController
     when 5
       system 'clear'
       view_by_position
+    when 99
+      system 'clear'
+      puts 'I really should have a warning dialogue here... Oh well, what\'s the worst that could happen?'
+      address_book.entries.clear
+      main_menu
     when 6
       puts "Good-bye!"
       exit(0)
